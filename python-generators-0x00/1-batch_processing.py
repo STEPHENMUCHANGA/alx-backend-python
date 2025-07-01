@@ -53,3 +53,15 @@ try:
 except BrokenPipeError:
     sys.stderr.close()
   
+- If we use "return" instead of "yield", we get:
+def batch_processing(batch_size):
+    filtered = []
+    for batch in stream_users_in_batches(batch_size):
+        for user in batch:
+            if user['age'] > 25:
+                filtered.append(user)
+    return filtered
+ - Then the 2-main.py will be:
+ users = processing.batch_processing(50)
+for user in users:
+    print(user)
