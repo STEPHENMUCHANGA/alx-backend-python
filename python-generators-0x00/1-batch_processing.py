@@ -29,10 +29,10 @@ def stream_users_in_batches(batch_size):
 
 
 def batch_processing(batch_size):
-    for batch in stream_users_in_batches(batch_size):  # loop 1
-        for user in batch:  # loop 2
+    for batch in stream_users_in_batches(batch_size):
+        for user in batch:
             if user['age'] > 25:
-                yield user  # loop 3 is implicit inside generator consumption
+                yield user  # YIELD matching user
 
 #### Explanation:
 - stream_users_in_batches(batch_size) fetches batch_size rows at a time and yields them as a list.
