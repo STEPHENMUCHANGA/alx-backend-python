@@ -34,5 +34,9 @@ def fetch_all_users(query):
 users = fetch_all_users(query="SELECT * FROM users")
 print(users)
 
+-- Example--
+
+[2025-07-03 14:50:21] Executing SQL Query: SELECT * FROM users
+[('001', 'Alice', 'alice@example.com'), ('002', 'Bob', 'bob@example.com')]
 
 
