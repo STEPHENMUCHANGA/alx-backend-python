@@ -4,6 +4,7 @@
 - Write a unit test for it using unittest.TestCase.
 -Use @parameterized.expand to test multiple input cases concisely.
 ### Understanding access_nested_map
+#!/usr/bin/env python3
 # utils.py
 def access_nested_map(nested_map, path):
     for key in path:
